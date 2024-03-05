@@ -1,0 +1,39 @@
+.scoreboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.score {
+  margin-bottom: 10px;
+  font-size: 7em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.button:active {
+  background-color: #ccc;
+}

@@ -1,7 +1,7 @@
 {
-  "name": "@repo/ch-00",
+  "name": "@repo/ch-01",
   "version": "1.0.0",
-  "description": "Template for starting vanilla React project",
+  "description": "Starting point",
   "main": "src/main.jsx",
   "type": "module",
   "scripts": {
