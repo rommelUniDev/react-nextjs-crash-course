@@ -5,7 +5,7 @@
   "main": "src/main.jsx",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev:ch00": "vite",
     "build": "vite build"
   },
   "keywords": [
