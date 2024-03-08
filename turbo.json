@@ -12,6 +12,14 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "dev:ch01": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev:ch02": {
+      "cache": false,
+      "persistent": true
     }
   }
 }
