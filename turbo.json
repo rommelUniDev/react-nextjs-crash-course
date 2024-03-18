@@ -20,6 +20,10 @@
     "dev:ch02": {
       "cache": false,
       "persistent": true
+    },
+    "dev:nj:final": {
+      "cache": false,
+      "persistent": true
     }
   }
 }
