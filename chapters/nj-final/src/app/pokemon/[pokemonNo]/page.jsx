@@ -1,4 +1,4 @@
-import { PokemonDisplay } from "../../../components/PokemonDisplay";
+import { PokemonDisplay } from "../../../components/PokemonDisplay/PokemonDisplay";
 
 async function getPokemonData(pokemonNo) {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonNo}`);
@@ -7,7 +7,7 @@ async function getPokemonData(pokemonNo) {
   return data;
 }
 
-export default async function PokemonDetail({ params }) {
+export default async function PokemonDetailPage({ params }) {
   const pokemon = await getPokemonData(params.pokemonNo);
   return (
     <main>
