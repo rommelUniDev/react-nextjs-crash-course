@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import "./PokemonList.css";
 
 export function PokemonList({ pokemons }) {
 
@@ -14,7 +15,7 @@ export function PokemonList({ pokemons }) {
   return (
     <div className="pokemon-list">
       {pokemons.map((pokemon) => (
-        <Link href={`/pokemon/${pokemon.id}`} key={pokemon.id}>
+        <Link href={`/pokemon/${pokemon.id}`} key={pokemon.id} className="pokemon-card">
           <div key={pokemon.id} className="pokemon">
             <h2 className="pokemon-name">{pokemon.name}</h2>
             <Image

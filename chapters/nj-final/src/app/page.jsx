@@ -1,4 +1,5 @@
-import { PokemonList } from "../components/PokemonList";
+import { PokemonList } from "../components/PokemonList/PokemonList";
+import "./page.css";
 
 const getFavoritePokemonData = async () => {
   const pokemonIds = [1, 4, 7, 25, 133, 150];
@@ -16,7 +17,7 @@ export default async function Home() {
   const pokemons = await getFavoritePokemonData();
   return (
     <main>
-      <div>
+      <div className="pokemon-app">
         <h1>My Pokemon App</h1>
         <h2>My Current Team</h2>
         <PokemonList pokemons={pokemons} />
