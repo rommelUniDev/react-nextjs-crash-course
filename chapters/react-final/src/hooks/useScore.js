@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export function useScore(initialScore, maxScore) {
   const [score, setScore] = useState(initialScore);

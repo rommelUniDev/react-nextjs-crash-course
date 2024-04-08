@@ -1,16 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export function PlayerScore({ name, score, onIncrement, onDecrement }) {
   return (
-    <div className="player-score">
+    <div className='player-score'>
       <h2>{name}</h2>
-      <p className="score">{score}</p>
-      <div className="buttons">
-        <button className="button" onClick={onDecrement}>
+      <p className='score'>{score}</p>
+      <div className='buttons'>
+        <button className='button' onClick={onDecrement}>
           -
         </button>
-        <button className="button" onClick={onIncrement}>
+        <button className='button' onClick={onIncrement}>
           +
         </button>
       </div>
