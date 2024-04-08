@@ -16,7 +16,7 @@ export function PokemonList({ pokemons }) {
     <div className='pokemon-list'>
       {pokemons.map((pokemon) => (
         <Link href={`/pokemon/${pokemon.id}`} key={pokemon.id} className='pokemon-card'>
-          <div key={pokemon.id} className='pokemon'>
+          <div>
             <h2 className='pokemon-name'>{pokemon.name}</h2>
             <Image
               src={pokemon.sprites.front_default}
