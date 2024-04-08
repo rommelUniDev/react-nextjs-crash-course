@@ -1,11 +1,11 @@
 {
-  "name": "@repo/ch-02",
+  "name": "@repo/ch-03",
   "version": "1.0.0",
   "description": "Starting point",
   "main": "src/main.jsx",
   "type": "module",
   "scripts": {
-    "dev:ch02": "vite",
+    "dev:ch03": "vite",
     "build": "vite build"
   },
   "keywords": [

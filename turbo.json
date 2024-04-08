@@ -21,6 +21,10 @@
       "cache": false,
       "persistent": true
     },
+    "dev:ch03": {
+      "cache": false,
+      "persistent": true
+    },
     "dev:nj:final": {
       "cache": false,
       "persistent": true
