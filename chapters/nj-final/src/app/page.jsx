@@ -1,4 +1,5 @@
 import { PokemonList } from '../components/PokemonList/PokemonList';
+import { PokemonSearch } from '../components/PokemonSearch/PokemonSearch';
 import './page.css';
 
 const getFavoritePokemonData = async () => {
@@ -13,14 +14,24 @@ const getFavoritePokemonData = async () => {
   return pokemons;
 };
 
+const getAllPokemonData = async () => {
+  const pokemonsResponse = await fetch(
+    `https://pokeapi.co/api/v2/pokemon?limit=1302`
+  );
+  if (!pokemonsResponse.ok) throw new Error('Failed to fetch data');
+  const pokemonData = await pokemonsResponse.json();
+  return pokemonData.results.map((pokemon) => pokemon.name);
+};
+
 export default async function Home() {
-  const pokemons = await getFavoritePokemonData();
+  const favoritePokemons = await getFavoritePokemonData();
+  const allPokemons = await getAllPokemonData();
   return (
     <>
       <h2>My Current Team</h2>
-      <PokemonList pokemons={pokemons} />
+      <PokemonList pokemons={favoritePokemons} />
       <h2>Search for Pokemon</h2>
-      {/** Search component here */}
+      <PokemonSearch pokemonNames={allPokemons} />
     </>
   );
 }
