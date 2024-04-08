@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { PokemonDisplay } from "../../../components/PokemonDisplay/PokemonDisplay";
 
 async function getPokemonData(pokemonNo) {
@@ -9,5 +11,10 @@ async function getPokemonData(pokemonNo) {
 
 export default async function PokemonDetailPage({ params }) {
   const pokemon = await getPokemonData(params.pokemonNo);
-  return <PokemonDisplay pokemon={pokemon} />;
+  return (
+    <>
+      <PokemonDisplay pokemon={pokemon} />
+      <Link href="/">Go Back</Link>
+    </>
+  );
 }
