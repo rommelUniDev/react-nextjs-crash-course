@@ -16,7 +16,7 @@
 a {
   font-weight: 500;
   color: #00f;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 
 a:hover {
@@ -29,6 +29,10 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.app {
+  padding: 1rem;
 }
 
 @media (prefers-color-schema: light) {
