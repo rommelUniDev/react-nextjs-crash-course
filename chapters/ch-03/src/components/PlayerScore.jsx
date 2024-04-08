@@ -11,6 +11,7 @@ export function PlayerScore({ name, score, onIncrement, onDecrement }) {
           +
         </button>
       </div>
+      <div className='reset'>Reset</div>
     </div>
   );
 }

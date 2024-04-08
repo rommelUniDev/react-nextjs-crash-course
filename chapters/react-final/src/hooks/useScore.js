@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
 
+/**
+ * Create a hook to manage each score display
+ * @param {number} initialScore
+ * @param {number} maxScore
+ * @param {string} player
+ * @returns {{ score: number, incrementScore: (count?: number) => void, decrementScore: (count?: number) => void, resetScore: () => void }} An object containing the current score, a function to increment the score, and a function to decrement the score
+ */
 export function useScore(initialScore, maxScore, player) {
   const [score, setScore] = useState(initialScore);
 
@@ -30,6 +37,11 @@ export function useScore(initialScore, maxScore, player) {
     localStorage.setItem(`${player}Score`, result);
     setScore(result);
   }
-  
-  return [score, incrementScore, decrementScore];
+
+  function resetScore() {
+    localStorage.removeItem(`${player}Score`);
+    setScore(initialScore);
+  }
+
+  return { score, incrementScore, decrementScore, resetScore };
 }

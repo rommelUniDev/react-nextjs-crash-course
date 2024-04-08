@@ -1,16 +1,24 @@
+.title {
+  margin-left: 5em;
+}
+
 .scoreboard {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
-  justify-content: center;
+  margin-left: 5em;
+  gap: 3em;
+  justify-content: space-around;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
 }
 
 .score {
+  margin-top: 5px;
   margin-bottom: 10px;
+  min-height: 230px;
+  min-width: 140px;
   font-size: 7em;
 }
 
@@ -19,7 +27,7 @@
   justify-content: center;
 }
 
-.button {
+.buttons button {
   margin: 0 5px;
   padding: 10px 20px;
   font-size: 18px;
@@ -28,12 +36,23 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  color: #030316;
 }
 
-.button:hover {
+.buttons button:hover {
   background-color: #ddd;
 }
 
-.button:active {
+.buttons button:active {
   background-color: #ccc;
+}
+
+.reset {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #ff0;
+  cursor: pointer;
 }

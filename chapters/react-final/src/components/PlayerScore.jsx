@@ -1,19 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-export function PlayerScore({ name, score, onIncrement, onDecrement }) {
+export function PlayerScore({
+  name,
+  score,
+  onIncrement,
+  onDecrement,
+  onReset,
+}) {
   return (
-    <div className='player-score'>
+    <div className="player-score">
       <h2>{name}</h2>
-      <p className='score'>{score}</p>
-      <div className='buttons'>
-        <button className='button' onClick={onDecrement}>
-          -
-        </button>
-        <button className='button' onClick={onIncrement}>
-          +
-        </button>
+      <p className="score">{score}</p>
+      <div className="buttons">
+        <button onClick={onDecrement}>-</button>
+        <button onClick={onIncrement}>+</button>
       </div>
+      <button className="reset" onClick={onReset}>
+        Reset
+      </button>
     </div>
   );
 }
@@ -23,4 +28,5 @@ PlayerScore.propTypes = {
   score: PropTypes.number.isRequired,
   onIncrement: PropTypes.func.isRequired,
   onDecrement: PropTypes.func.isRequired,
+  onReset: PropTypes.func.isRequired,
 };

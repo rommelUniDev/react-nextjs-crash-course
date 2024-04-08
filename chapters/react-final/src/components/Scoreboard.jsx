@@ -4,12 +4,18 @@ import "./Scoreboard.css";
 
 export function Scoreboard() {
   const maxScore = 21;
-  const [player1Score, incrementPlayer1Score, decrementPlayer1Score] = useScore(
-    0,
-    maxScore,
-    "player1"
-  );
-  const [player2Score, incrementPlayer2Score, decrementPlayer2Score] = useScore(
+  const {
+    score: player1Score,
+    incrementScore: incrementPlayer1Score,
+    decrementScore: decrementPlayer1Score,
+    resetScore: resetPlayer1Score,
+  } = useScore(0, maxScore, "player1");
+  const {
+    score: player2Score,
+    incrementScore: incrementPlayer2Score,
+    decrementScore: decrementPlayer2Score,
+    resetScore: resetPlayer2Score,
+  } = useScore(
     0,
     maxScore,
     "player2"
@@ -27,12 +33,14 @@ export function Scoreboard() {
           score={player1Score}
           onIncrement={() => incrementPlayer1Score(1)}
           onDecrement={() => decrementPlayer1Score(1)}
+          onReset={resetPlayer1Score}
         />
         <PlayerScore
           name="Player 2"
           score={player2Score}
           onIncrement={() => incrementPlayer2Score(1)}
           onDecrement={() => decrementPlayer2Score(1)}
+          onReset={resetPlayer2Score}
         />
       </div>
     </>
