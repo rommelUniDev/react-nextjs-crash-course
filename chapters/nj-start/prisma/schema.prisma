@@ -12,3 +12,12 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model StrategicLifeArea {
+  id                  String  @id @default(cuid())
+  name                String
+  lifeArea            String  @unique
+  satisfactionRating  Int
+  importanceRating    Int
+  hoursPerWeek        Int
+}
