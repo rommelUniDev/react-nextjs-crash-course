@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <main>
           <div className="pokemon-app">
-            <h1>My Pokemon App</h1>
+            <h1>Key Areas of Life Mapping</h1>
             {children}
           </div>
         </main>

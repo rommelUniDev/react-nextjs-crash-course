@@ -9,6 +9,7 @@
     "dev:ch03": "turbo dev:ch03",
     "dev:ch04": "turbo dev:ch04",
     "dev:final": "turbo dev:final",
+    "dev:nj:start": "turbo dev:nj:start",
     "dev:nj:final": "turbo dev:nj:final",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
