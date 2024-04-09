@@ -25,6 +25,10 @@
       "cache": false,
       "persistent": true
     },
+    "dev:ch04": {
+      "cache": false,
+      "persistent": true
+    },
     "dev:final": {
       "cache": false,
       "persistent": true

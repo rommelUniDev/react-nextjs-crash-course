@@ -1,25 +1,22 @@
-import { PlayerScore } from "./PlayerScore";
-import { useScore } from "../hooks/useScore";
-import "./Scoreboard.css";
+import PropTypes from 'prop-types';
 
-export function Scoreboard() {
-  const maxScore = 21;
+import { PlayerScore } from './PlayerScore';
+import { useScore } from '../hooks/useScore';
+import './Scoreboard.css';
+
+export function Scoreboard({ maxScore }) {
   const {
-    score: player1Score,
+    score: player1Score,  
     incrementScore: incrementPlayer1Score,
     decrementScore: decrementPlayer1Score,
     resetScore: resetPlayer1Score,
-  } = useScore(0, maxScore, "player1");
+  } = useScore(0, maxScore, 'player1');
   const {
     score: player2Score,
     incrementScore: incrementPlayer2Score,
     decrementScore: decrementPlayer2Score,
     resetScore: resetPlayer2Score,
-  } = useScore(
-    0,
-    maxScore,
-    "player2"
-  );
+  } = useScore(0, maxScore, 'player2');
 
   return (
     <>
@@ -46,3 +43,7 @@ export function Scoreboard() {
     </>
   );
 }
+
+Scoreboard.propTypes = {
+  maxScore: PropTypes.number.isRequired,
+};
