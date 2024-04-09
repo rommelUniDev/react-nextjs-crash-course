@@ -1,5 +1,18 @@
+import LifeAreaForm from '../../../components/LifeAreaForm';
+
 function AddKeyLifeAreaPage() {
-  return <div>This is to add a new key life area into your portfolio</div>;
+  return (
+    <div>
+      <h2>Add your Key Life Area</h2>
+      <LifeAreaForm initialKeyLifeArea={{
+        name: '',
+        lifeArea: '',
+        satisfactionRating: 0,
+        importanceRating: 0,
+        hoursPerWeek: 0
+      }} />
+    </div>
+  );
 }
 
 export default AddKeyLifeAreaPage;

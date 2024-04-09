@@ -34,6 +34,13 @@ const BubbleChart = ({ title, data }) => {
     },
   };
 
+  if (!data.length) return (
+    <>
+      <h2>{title}</h2>
+      <p>No key areas added yet. Add one now to map it on the bubble chart.</p>
+    </>
+  )
+
   return (
     <Chart
       chartType="BubbleChart"

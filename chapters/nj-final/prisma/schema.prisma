@@ -15,8 +15,8 @@ datasource db {
 
 model StrategicLifeArea {
   id                  String  @id @default(cuid())
-  name                String
-  lifeArea            String  @unique
+  name                String  @unique
+  lifeArea            String  
   satisfactionRating  Int
   importanceRating    Int
   hoursPerWeek        Int
