@@ -13,8 +13,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <main>
-          <div className="pokemon-app">
-            <h1>Key Areas of Life Mapping</h1>
+          <div className="life-portfolio-app">
+            <h1>Strategic Life Portfolio</h1>
             {children}
           </div>
         </main>

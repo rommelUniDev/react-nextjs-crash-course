@@ -1,8 +1,9 @@
 'use client';
 
+import { lifeAreaMap } from '@/lib/lifeAreaMap';
 import { useState } from 'react';
 
-const LifeAreaForm = ({ initialKeyLifeArea }) => {
+const LifeAreaForm = ({ initialKeyLifeArea, onFormSubmit }) => {
   const [keyLifeArea, setKeyLifeArea] = useState(initialKeyLifeArea);
 
   const handleChange = (event) => {
@@ -12,8 +13,16 @@ const LifeAreaForm = ({ initialKeyLifeArea }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Call the API here to submit the form data
-    console.info('Form submitted', keyLifeArea);
+    // Convert the string values to numbers
+    const hoursPerWeek = Number(keyLifeArea.hoursPerWeek);
+    const satisfactionRating = Number(keyLifeArea.satisfactionRating);
+    const importanceRating = Number(keyLifeArea.importanceRating);
+    onFormSubmit({
+      ...keyLifeArea,
+      hoursPerWeek,
+      satisfactionRating,
+      importanceRating,
+    });
   };
 
   return (
@@ -35,16 +44,11 @@ const LifeAreaForm = ({ initialKeyLifeArea }) => {
           value={keyLifeArea.lifeArea}
           onChange={handleChange}
         >
-          <option value="relationships">Relationships</option>
-          <option value="body-mind-spirit">Body, Mind, Spirituality</option>
-          <option value="community-society">Community and Society</option>
-          <option value="job-learning-finances">
-            Job, Education, and Finances
-          </option>
-          <option value="interests-entertainment">
-            Interests and Entertainment
-          </option>
-          <option value="personal-care">Personal Care</option>
+          {Object.keys(lifeAreaMap).map((key) => (
+            <option key={key} value={key}>
+              {lifeAreaMap[key]}
+            </option>
+          ))}
         </select>
       </label>
       <br />

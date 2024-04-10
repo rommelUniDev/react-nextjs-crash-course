@@ -9,8 +9,8 @@ const BubbleChart = ({ title, data }) => {
       title: 'Satisfaction',
       baseline: 5,
       viewWindow: {
-        min: -2,
-        max: 12,
+        min: -3,
+        max: 15,
       },
       ticks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     },
@@ -18,8 +18,11 @@ const BubbleChart = ({ title, data }) => {
       title: 'Importance',
       baseline: 5,
       viewWindow: {
-        min: -2,
-        max: 12,
+        min: -3,
+        max: 15,
+      },
+      gridlines: {
+        count: 10,
       },
       ticks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     },
@@ -45,7 +48,7 @@ const BubbleChart = ({ title, data }) => {
     <Chart
       chartType="BubbleChart"
       width="100%"
-      height="80%"
+      height="100%"
       data={data}
       options={options}
       loader={<div>Loading chart...</div>}

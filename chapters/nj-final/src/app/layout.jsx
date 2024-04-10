@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <main>
           <div className="key-life-app">
-            <h1>Key Areas of Life Mapping</h1>
+            <h1>Strategic Life Portfolio</h1>
             {children}
           </div>
         </main>

@@ -9,8 +9,8 @@ const BubbleChart = ({ title, data }) => {
       title: 'Satisfaction',
       baseline: 5,
       viewWindow: {
-        min: -2,
-        max: 12,
+        min: -3,
+        max: 15,
       },
       ticks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     },
@@ -18,8 +18,8 @@ const BubbleChart = ({ title, data }) => {
       title: 'Importance',
       baseline: 5,
       viewWindow: {
-        min: -2,
-        max: 12,
+        min: -3,
+        max: 15,
       },
       ticks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     },
@@ -34,11 +34,18 @@ const BubbleChart = ({ title, data }) => {
     },
   };
 
+  if (!data.length) return (
+    <>
+      <h2>{title}</h2>
+      <p>No key areas added yet. Add one now to map it on the bubble chart.</p>
+    </>
+  )
+
   return (
     <Chart
       chartType="BubbleChart"
       width="100%"
-      height="80%"
+      height="100%"
       data={data}
       options={options}
       loader={<div>Loading chart...</div>}
