@@ -3,7 +3,7 @@ import LifeAreaForm from '../../../components/LifeAreaForm';
 function AddKeyLifeAreaPage() {
   return (
     <div>
-      <h2>Add your Key Life Area</h2>
+      <h3>Add your Key Life Area</h3>
       <LifeAreaForm initialKeyLifeArea={{
         name: '',
         lifeArea: '',

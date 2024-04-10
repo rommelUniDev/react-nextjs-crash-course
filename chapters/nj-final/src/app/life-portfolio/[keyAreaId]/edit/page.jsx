@@ -5,7 +5,7 @@ function EditKeyAreaPage({ params }) {
   console.info('Edit Key Area ID:', keyAreaId);
   return (
     <div id={keyAreaId}>
-      <h1>Edit Key Life Area</h1>
+      <h3>Edit Key Life Area</h3>
       <LifeAreaForm
         initialKeyLifeArea={{
           name: 'Something',
