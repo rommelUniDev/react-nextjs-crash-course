@@ -21,7 +21,7 @@ const LifeAreasTable = ({ data }) => {
         {data.map((keyLifeArea) => (
           <tr key={keyLifeArea.id}>
             <th scope="row">{keyLifeArea.name}</th>
-            <td>{keyLifeArea.lifeArea}</td>
+            <td>{lifeAreaMap[keyLifeArea.lifeArea]}</td>
             <td>{keyLifeArea.satisfactionRating}</td>
             <td>{keyLifeArea.importanceRating}</td>
             <td>{keyLifeArea.hoursPerWeek}</td>
