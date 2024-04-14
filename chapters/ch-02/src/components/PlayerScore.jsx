@@ -1,8 +1,8 @@
-export function PlayerScore(props) {
+export function PlayerScore(anything) {
   return (
     <div className='player-score'>
-      <h2>{props.name}</h2>
-      <p className='score'>{props.score}</p>
+      <h2>{anything.name}</h2>
+      <p className='score'>{anything.score}</p>
       <div className='buttons'>
         <button className='button'>
           -

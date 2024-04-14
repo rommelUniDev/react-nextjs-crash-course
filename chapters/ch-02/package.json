@@ -1,7 +1,7 @@
 {
   "name": "@repo/ch-02",
   "version": "1.0.0",
-  "description": "Starting point",
+  "description": "Props in React",
   "main": "src/main.jsx",
   "type": "module",
   "scripts": {
